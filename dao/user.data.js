@@ -1,8 +1,14 @@
-let users=[]
+const Users = require('../dao/models/user.model.js'); 
 
-module.exports={
-    getAllUsers:()=>users,
-    createUsers:(newUser)=>{
-    users.push(newUser)
-    }
-}
+function getAllUsers() {
+    return Users.find().exec();
+  }
+  
+  function createUser(newUser) {
+    return Users.create(newUser);
+  }
+  
+  module.exports = {
+    getAllUsers,
+    createUser
+  };

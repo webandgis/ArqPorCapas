@@ -1,14 +1,14 @@
-const usersData=require('../dao/user.data.js')
+const userData = require('../dao/user.data.js');
 
-function getAllUsers(){
-    return usersData.getAllUsers()
+function getAllUsers() {
+  return userData.getAllUsers();
 }
 
-function createUsers(newUser){
-    return usersData.createUsers(newUser)
+function createUser(newUser) {
+  return userData.createUser(newUser);
 }
 
-module.exports={
-    getAllUsers,
-    createUsers
-}
+module.exports = {
+  getAllUsers,
+  createUser
+};

@@ -1,8 +1,14 @@
-let products=[]
+const Product = require('../dao/models/product.model.js'); 
 
-module.expor={
-    getAllProducts:()=>products,
-    createProduct:(newProduct)=>{
-        products.push(newProduct)
-    }
-}
+function getAllProducts() {
+    return Product.find().exec();
+  }
+  
+  function createProduct(newProduct) {
+    return Product.create(newProduct);
+  }
+  
+  module.exports = {
+    getAllProducts,
+    createProduct
+  };

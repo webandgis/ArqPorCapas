@@ -1,15 +1,14 @@
-const productData=require('../dao/product.data.js')
+const productData = require('../dao/product.data.js');
 
-
-function getAllProducts(){
-    return productData.getAllProducts()
+function getAllProducts() {
+  return productData.getAllProducts();
 }
 
-function createProducts(newProduct){
-    return productData.createProducts(newProduct)
+function createProduct(newProduct) {
+  return productData.createProduct(newProduct);
 }
 
-module.exports={
-    getAllProducts,
-    createProducts
-}
+module.exports = {
+  getAllProducts,
+  createProduct
+};
